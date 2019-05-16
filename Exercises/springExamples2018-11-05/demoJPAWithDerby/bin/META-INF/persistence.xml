@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+  version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+  
+ 
+<persistence-unit name="jpaDemo" transaction-type="RESOURCE_LOCAL">
+<class>trainologic.Company</class>
+<class>trainologic.Item</class>
+<class>trainologic.CompositeService2</class>
+<class>trainologic.CompositeServicePK2</class>
+<class>trainologic.Customer</class>
+<class>trainologic.BusinessCustomer</class>
+<class>trainologic.VIPCustomer</class>
+<class>trainologic.Department</class>
+<class>trainologic.Employee</class>
+<class>trainologic.EmployeeCar</class>
+<class>trainologic.EmployeeContract</class>
+<class>trainologic.EmployeeTask</class>
+<class>example01SimplePersistence.Client</class>
+<class>example02TableAnnotation.Client2</class>
+<class>example03Optional.Client3</class>
+<class>example04Embedded.Item4</class>
+<class>example05EmbeddedPrimaryKey.Item5</class>
+<class>example06Detached.Client6</class>
+<class>example07Merge.Client7</class>
+<class>example08Inheritance.Customer8</class>
+<class>example08Inheritance.VIPCustomer8</class>
+<class>example08Inheritance.BusinessCustomer8</class>
+<class>example09OneToOne.Employee9</class>
+<class>example09OneToOne.EmployeeContract9</class>
+<class>example09OneToOne.EmployeeCar9</class>
+<class>example10OneToMany.Employee10</class>
+<class>example10OneToMany.EmployeeTask10</class>
+<class>example11ManyToOne.Employee11</class>
+<class>example11ManyToOne.Department11</class>
+<class>example12InnerJoin.Customer12</class>
+<class>example12InnerJoin.Order12</class>
+<class>example13MoreQueries.Owner13</class>
+<class>example13MoreQueries.Pet13</class>
+<class>example14FetchJoin.Customer14</class>
+<class>example14FetchJoin.Order14</class>
+
+<properties>
+<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
+<property name="javax.persistence.jdbc.url"  value="jdbc:derby:/home/trainologic/jpaDemo;create=true" />
+<property name="javax.persistence.jdbc.user" value="test" />
+<property name="javax.persistence.jdbc.password" value="test" />
+
+<!-- EclipseLink should create the database schema automatically -->
+<!-- 
+<property name="eclipselink.logging.level.sql" value="FINE"/>
+<property name="eclipselink.ddl-generation" value="create-tables" />
+-->
+<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+<property name="eclipselink.ddl-generation.output-mode" value="database" />
+</properties>
+</persistence-unit>
+</persistence>
+
+
+
+
+

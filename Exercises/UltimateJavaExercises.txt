@@ -1,0 +1,35 @@
+Ultimate Java Exercises
+
+Threads and Synchronization
+1. Use 2 threads to compute the sum of integers from 0 to 9999 
+    ( should be 49995000 )
+   They should update a static int member "result" of the main class
+   Each thread should do 1/2 of the calculation
+   * Show that without synchronization the result is incorrect
+   * Use System.out.println to show that the threads are working at the
+     same time ( interleaved )
+2. Find another way to do this, without using the word "synchronized"
+3. Create a class called SleepCalc that
+    can take 2 integers, and start a thread that calculates their sum
+    Create a class called MainClass with a main that uses SleepyCalc
+     to calculate 5+3
+    Make main wait for SleepyCalc to complete its calculation 
+     1) Using join
+     2) Using wait/notify
+4. [Optional] Show a caching/visiblity problem that is solved by adding
+    "volatile" to a variable
+5. [optional] Create a Runnable class called worker that has 2 instance members
+    String name, int id
+    Name should be the same for all threads on the same worker
+    id should be unique per thread and auto incrementing so that
+     thread 1 id = 1, thread 2 id = 2 , etc
+    Create 2 threads ON THE SAME WORKER INSTANCE, and make them loop,
+    printing their names and ids as follows:
+     name = Worker1 id = 1
+     name = Worker1 id = 2
+     name = Worker1 id = 1
+     name = Worker1 id = 2
+     Hint: You may need synchronization in this one
+
+
+     

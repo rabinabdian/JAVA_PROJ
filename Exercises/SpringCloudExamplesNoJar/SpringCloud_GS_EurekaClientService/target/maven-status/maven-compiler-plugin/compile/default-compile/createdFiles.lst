@@ -1,0 +1,5 @@
+META-INF\MANIFEST.MF
+hello\ServiceInstanceRestController.class
+META-INF\maven\com.example\eureka-client\pom.properties
+META-INF\maven\com.example\eureka-client\pom.xml
+hello\EurekaClientService.class

@@ -1,0 +1,88 @@
+Spring Course Exercises:
+* Create a Maven project Called Spring Exercises
+1)Create a class called FactorialCalc that has a function
+  int calcFactorial(int value)   e.g. 5!=5*4*3*2*1 = 120
+  Create a Spring XML Configuration file
+  In the file create a bean that defines an instance of factorialCalc
+  Create a main class that uses spring to create that instance
+  Call calcFactorial on the instance to see that it works.
+2)Create a class called Student
+  It has 2 fields: String name, and ID studentID
+  Create a class called ID 
+  It has 2 fields int prefix, int postfix  (e.g. 555-444)
+  Create a Spring XML Configuration file that defines
+  2 students and 2 ids, and sets each student with an id
+  Write a main to check the 2 students have correct IDs
+3) Add a constructor for student that takes a name parameter
+   Modify the XML give each student a name using the constructor
+4) Add a function to student called postConstruct 
+   modify the XML so that postConstruct is called automatically.
+   check that it works
+5) Create another exercise with 1 Student and 1 ID
+   with no XML configuration
+   ( Using only annotations, create 1 students that has 1 id )
+6) Duplicate the 2 student exercise, with no XML configuration
+   ( Using only annotations, create 2 students with 2 ids )
+
+Spring JDBC Exercises:
+1) Create a database table called students
+   Create a class called student with int studentID, String name, double gradeAverage
+   Create some students and use Spring DataSource
+   and JDBCTemplate classes to write them to the DB
+   Check that they were written using MYSQL workbench
+2) Write a java program that uses spring JDBC classes to read
+   the student list from the DB
+3) Create a class StudentDAO that has
+    1) a writeStudents fucntion
+      that takes a list of students and writes them to DB
+    2) a getStudents function that returns a list of all students
+    3) has a findStudentByID function
+   Use Spring to Inject the JDBCTemplate and Dataset into the DAO
+
+Spring Hibernate JPA Exercises
+1) Create a SpringJPA project that will 
+   Create a Student Entity 
+    create some Students, and use JPA to map them to the Students table
+    * Create an EntityManagerFactory
+    * Create an EntityManager
+    * Use the EntityManager to persist the students
+
+Spring Aspects Exercises
+1) Create a Class calculator with a function int Add( int a, int b )
+   Create an Aspect that intercepts Add so that the result is 10 * 
+    what a normal add should be. 
+   So if a user does calc.add(5,3) -> the result should be 80
+2) Create an Annotation MultiplyResult  ( function level annotation)
+   that will cause this to happen for any function with the annotation
+
+
+Spring Data JPA Exercises
+1) Create A class Book with int id and String title( default="no titile" )
+   Create your own interface that extends a JPA/Crud repository
+   Create a BookDAO class that wraps the JPARepository and implements 
+   the following functions:
+      addBook -> saves a book to the DB, but only if it has a title 
+        ( not "no title")
+      findBookByTitle
+      findBookByID
+   Test that your DAO works without implementing any SQL
+
+Spring Boot
+1) Spring-Boot-Data-JPA: repeat, the Data-JPA exercise, but use boot and H2-in-memory db
+   ( the BookDAO exercise )
+
+Spring Boot MVC
+1) Create a class Calculator with a function power ('Chezka')
+   e.g. power(2,3) = 2^3 = 8
+   Expose a calcPower web service at http://localhost:8080/calculator/calcPower
+   that will accept the base and the power, and return the result
+   Test your code from a browser or postman
+2) Change your method to only accept HTTP POST, and check that it works
+3) Create a class IntDivisionResult with members { int quotient, int remainder }
+   Create Web Service at http://localhost:8080/calculator/intDivision ( Get or Post)
+    that will accepts two parameters (a,b) and return the result of a/b
+    e.g. for 7/3 {"quotient":"2", "remainder":"1"}
+4) Change intDivision so it also returns status OK(200)
+    unless there is a divide by 0, then return 405
+5) From intDivision print out the request headers to Console, for logging
+

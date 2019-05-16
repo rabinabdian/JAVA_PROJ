@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       xmlns:c="http://www.springframework.org/schema/c" xmlns:p="http://www.springframework.org/schema/p">
+
+  <bean id="myDS"  scope="singleton"
+        class="org.apache.commons.dbcp.BasicDataSource" 
+        destroy-method="close" 
+        p:driverClassName="com.mysql.jdbc.Driver"
+        p:url="jdbc:mysql://localhost:3306/people" 
+        p:username="root"  
+        p:password="MyNewPass" 
+        p:maxActive="-1" 
+        p:maxIdle="-1"
+        p:maxWait="-1" />
+
+
+<bean id="myTemplate" 
+         class="org.springframework.jdbc.core.JdbcTemplate">
+        <constructor-arg ref="myDS">
+        </constructor-arg>
+</bean>
+
+<bean id="myDAO"
+            class="example04TemplateXMLConfig.CustomerDao">
+      <property name="jdbcTemplate" ref="myTemplate"/>
+</bean>
+    
+</beans>

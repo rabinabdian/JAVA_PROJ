@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: hello.ApplicationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.763 s <<< FAILURE! - in hello.ApplicationTest
+contextLoads(hello.ApplicationTest)  Time elapsed: 0.987 s  <<< FAILURE!
+java.lang.AssertionError: No value at JSON path "$.headers.Hello"
+	at hello.ApplicationTest.contextLoads(ApplicationTest.java:45)
+Caused by: com.jayway.jsonpath.PathNotFoundException: Expected to find an object with property ['headers'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'.
+	at hello.ApplicationTest.contextLoads(ApplicationTest.java:45)
+
