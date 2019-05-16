@@ -1,0 +1,66 @@
+package package1;
+
+interface ThingsWithName
+{
+	String getName();
+}
+interface ThingsWithHair
+{
+	String getHairColor();		
+}
+class Person implements ThingsWithName, ThingsWithHair
+{
+	String name;
+	String hairColor = "Bald";
+	@Override
+	public String getHairColor() {
+		return hairColor;
+	}
+	@Override
+	public String getName() {
+		return name;
+	}
+}
+class Dog implements ThingsWithHair
+{
+	@Override
+	public String getHairColor() {
+		return hairColor;
+	}
+	String hairColor="brown";
+}
+
+class Furniture implements ThingsWithName
+{
+	String name = "STruppanChair";
+
+	@Override
+	public String getName() {
+		return name;
+	}
+}
+
+
+
+
+
+public class Example {
+
+	public static void main(String[] argsadfadf) {
+       Person p = new Person(); p.name = "Gad";
+       Furniture f = new Furniture(); f.name = "Chair";
+       nicePrintName(p);
+       nicePrintName(f);
+       nicePrintHairColor(p);
+	}
+	
+	static void nicePrintName(ThingsWithName p)
+	{
+		System.out.println("** The thing has a name which is **" + p.getName());
+	}
+	static void nicePrintHairColor(ThingsWithHair p)
+	{
+		System.out.println("** The thing has hair color **" + p.getHairColor());
+	}
+	
+}

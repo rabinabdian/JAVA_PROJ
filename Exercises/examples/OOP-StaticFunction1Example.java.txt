@@ -1,0 +1,36 @@
+package project1;
+
+
+
+class Ball
+{
+	int x;
+	int y;
+	public void printInfo()
+	{
+		System.out.println("I am a ball at " + x + ":" + y);
+		System.out.println("My address = " + this);
+	}
+	public static void printFactsAboutClass()
+	{
+		System.out.println("A Ball is round");
+		System.out.println("A Ball bounces");
+		System.out.println("A Ball is fun");
+	}
+	
+}
+
+
+public class Example {
+
+	public static void main(String[] argsadfadf) {
+          Ball.printFactsAboutClass();
+
+
+	}
+
+	
+	
+
+
+}

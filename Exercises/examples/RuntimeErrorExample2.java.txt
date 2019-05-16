@@ -1,0 +1,21 @@
+package project1;
+
+
+class Ball
+{
+	int x; 
+	int y;
+}
+
+public class Example {
+
+	public static void main(String[] args) {
+		Ball ball1 = null;
+		System.out.println(ball1.x);	
+		
+		// this will cause
+		// Exception in thread "main" java.lang.NullPointerException
+		//at project1.Example.main(Example.java:14)
+	}
+
+}

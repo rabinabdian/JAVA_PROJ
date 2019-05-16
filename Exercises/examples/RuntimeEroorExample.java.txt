@@ -1,0 +1,22 @@
+package project1;
+
+
+class Ball
+{
+	int x; 
+	int y;
+}
+
+public class Example {
+
+	public static void main(String[] args) {
+		Ball ball1 = null;
+		//Ball ball1 = new Ball();
+		int userSelect = 0; // pretend we read it from keyboard
+		if ( userSelect == 8) ball1 = new Ball();  
+		System.out.println(ball1.x); // this could be a runtime error
+		// if your did not select 8 , the ball1 will be null
+		
+	}
+
+}

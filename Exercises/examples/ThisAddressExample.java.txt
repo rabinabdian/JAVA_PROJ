@@ -1,0 +1,37 @@
+package project1;
+
+
+
+class Ball
+{
+	int x;
+	int y;
+	public void printInfo()
+	// compiler makes it:
+	// public void printInfo( Ball this )
+	{
+		System.out.println("I am a ball at " + x + ":" + y);
+		System.out.println("My address = " + this);
+	}
+}
+
+
+public class Example {
+
+	public static void main(String[] argsadfadf) {
+		Ball ball1 = new Ball(); 
+		ball1.x = 5; ball1.y = 9;
+		Ball ball2 = new Ball(); 
+		System.out.println(ball1);
+		ball1.printInfo();  
+		// compiler makes this into
+		//Ball.printInfo( ball1 )
+
+
+	}
+
+	
+	
+
+
+}

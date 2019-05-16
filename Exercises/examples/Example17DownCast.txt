@@ -1,0 +1,39 @@
+package package1;
+
+class Animal
+{
+	void makeSound()
+	{
+		
+	}
+}
+class Dog extends Animal
+{
+	@Override
+	void makeSound()
+	{
+		System.out.println("Woof!");
+	}
+	String dogFood = "Bonzo";
+}
+class Cat extends Animal
+{
+	@Override
+	void makeSound()
+	{
+		System.out.println("Meow!");
+	}
+}
+public class Example {
+
+	public static void main(String[] argsadfadf) {
+		Animal animal;
+		animal = new Dog();
+		//animal.dogFood = "Bonzo";  // compiler won't allow
+		
+		Dog temp = (Dog) animal;
+		System.out.println(temp.dogFood);
+
+
+	}
+}

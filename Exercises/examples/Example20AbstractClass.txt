@@ -1,0 +1,42 @@
+package package1;
+
+import java.util.Random;
+
+abstract class Animal
+{
+	int numOfLegs;
+	void printNumOfLegs() { System.out.println(numOfLegs);}
+	abstract void makeSound();
+	
+}
+class Dog extends Animal
+{
+	void makeSound()
+	{
+		System.out.println("Woof");
+	}
+}
+class Cat extends Animal
+{
+	@Override
+	void makeSound()
+	{
+		System.out.println("Meow!");
+	}
+
+}
+public class Example {
+
+	public static void main(String[] argsadfadf) {
+		Animal animal;
+		// with abstract , we cannot do this:
+		// animal = new Animal();
+	    int value = new Random().nextInt(2);
+	    if ( value == 1)
+		 animal = new Dog();
+	    else
+	    	animal = new Cat();
+
+
+	}
+}

@@ -1,0 +1,49 @@
+package package1;
+
+import java.util.Date;  // alias Date = java.util.Date
+
+import package0.Person;
+
+//class Ball
+//{
+//	private int x;
+//	public int y;
+//	public Ball(int xPos, int yPos) // constructor
+//	{
+//		this.x = xPos;
+//		this.y = yPos;
+//	}
+//	public Ball()
+//	{
+//		
+//	}
+//	public void printInfo()
+//	{
+//		System.out.println("I am a ball at " + x + ":" + y);
+//		System.out.println("My address = " + this);
+//	}
+//}
+
+
+class A
+{
+	void f1( int x )
+	{
+		System.out.println("F1 - version A");
+	}
+	void f1()
+	{
+		System.out.println("F1 - version B");		
+	}
+}
+public class Example {
+
+	public static void main(String[] argsadfadf) {
+		A a1 = new A();
+		a1.f1(5);
+	}
+	
+	
+
+
+}

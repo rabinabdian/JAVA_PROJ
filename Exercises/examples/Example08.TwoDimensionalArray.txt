@@ -1,0 +1,39 @@
+package project1;
+
+//
+//
+//class Ball
+//{
+//	int x;
+//	int y;
+//	public Ball(int xPos, int yPos) // constructor
+//	{
+//		this.x = xPos;
+//		this.y = yPos;
+//	}
+//	public Ball()
+//	{
+//		
+//	}
+//	public void printInfo()
+//	{
+//		System.out.println("I am a ball at " + x + ":" + y);
+//		System.out.println("My address = " + this);
+//	}
+//}
+
+public class Example {
+
+	public static void main(String[] argsadfadf) {
+		int matrix[][] = new int[5][3];
+		matrix[0][0] = 15;
+		System.out.println(matrix[0][0]);
+		int  column[] = matrix[0];
+		System.out.println(column.length);
+	}
+
+	
+	
+
+
+}

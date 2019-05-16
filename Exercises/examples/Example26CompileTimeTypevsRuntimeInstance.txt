@@ -1,0 +1,50 @@
+package package1;
+
+import java.util.Random;
+
+class Person
+{
+	String name;
+	public Person(String name)
+	{
+		this.name = name;
+	}
+	public void printInfo()
+	{
+		System.out.println("****Name=***"+name);
+	}
+	
+}
+
+// This class is incorrect, because by defining a onstructor in person
+// we erased the default  ( no arg) constructor of person
+// and the compiler neds it to create a new employee
+class Employee extends Person
+{
+	public Employee(String name, int salary)
+	{
+		super(name); // in this case super says which parent construcor to call
+		this.salary = salary;
+	}
+	public void printInfo()
+	{
+		super.printInfo();
+		System.out.println("****Salary=***"+salary);
+	}
+    int salary;
+}
+
+
+public class Example {
+
+	public static void main(String[] argsadfadf) {
+		Person p = new Employee("Moshe",2000);
+		p.printInfo();  // which printInfo will be called depends on the runtime type , in otherwords the runtime instance 
+		if ( today_is_tuesday )
+			p = new Person("Alex");
+		p.salary = 100; /// it is good that this does not compile
+		// which fields are available on a var, depends on its DECLARED type known at CompileTime
+		p.name = "xxxx";
+
+	}
+}

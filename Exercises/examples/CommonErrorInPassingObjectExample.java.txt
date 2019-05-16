@@ -1,0 +1,26 @@
+package project1;
+
+
+
+class Ball
+{
+	int x;
+	int y;
+}
+public class Example {
+
+	public static void main(String[] args) {
+		Ball ball1 = new Ball();
+		
+		f1(ball1);
+		System.out.println("In main value = " + ball1.x + ":" + ball1.y);			
+	}
+	public static void f1(Ball ball1)
+	{
+		//ball1 = new Ball();   // INCORECT - we wanted f1 to fill values of object created in main
+		// but this creates a new object, and fills the values in it, but main does not know it
+		ball1.x = 5;
+		ball1.y = 7;
+	}
+
+}

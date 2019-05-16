@@ -1,0 +1,40 @@
+package package1;
+
+import java.util.Random;
+
+class Person
+{
+	String name;
+	public Person(String name)
+	{
+		this.name = name;
+	}
+//	public Person()
+//	{
+//		this.name = "";
+//	}
+	
+}
+
+// This class is incorrect, because by defining a onstructor in person
+// we erased the default  ( no arg) constructor of person
+// and the compiler neds it to create a new employee
+class Employee extends Person
+{
+	public Employee(String name, int salary)
+	{
+		super(name); // in this case super says which parent construcor to call
+		this.salary = salary;
+	}
+    int salary;
+}
+
+
+public class Example {
+
+	public static void main(String[] argsadfadf) {
+		Person p = new Person("Alice");
+		Employee e = new Employee("Bob",100);
+
+	}
+}

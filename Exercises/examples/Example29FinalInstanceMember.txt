@@ -1,0 +1,23 @@
+package package1;
+
+import java.util.Random;
+
+
+class Person
+{
+	final int id;
+	Person()
+	{
+		id = 5;
+	}
+	Person(int id)
+	{
+		this.id = id;
+	}
+}
+public class Example {
+
+	public static void main(String[] argsadfadf) {
+
+	}
+}

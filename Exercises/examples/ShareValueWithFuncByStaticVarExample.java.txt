@@ -1,0 +1,19 @@
+package project1;
+
+
+public class Example {
+
+	static int meaning = 42;
+	
+	public static void main(String[] args) {
+
+		f1();
+		System.out.println("In main value = " + meaning);			
+	}
+	public static void f1()
+	{
+		meaning++;
+		System.out.println("In f1 value = " + meaning);			
+	}
+
+}

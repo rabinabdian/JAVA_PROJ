@@ -1,0 +1,37 @@
+package project1;
+
+//
+//
+//class Ball
+//{
+//	int x;
+//	int y;
+//	public Ball(int xPos, int yPos) // constructor
+//	{
+//		this.x = xPos;
+//		this.y = yPos;
+//	}
+//	public Ball()
+//	{
+//		
+//	}
+//	public void printInfo()
+//	{
+//		System.out.println("I am a ball at " + x + ":" + y);
+//		System.out.println("My address = " + this);
+//	}
+//}
+
+public class Example {
+
+	public static void main(String[] argsadfadf) {
+		int row[] = null; // there is no array
+		row[0] = 5;  // this will cause a null pointer exception
+
+	}
+
+	
+	
+
+
+}

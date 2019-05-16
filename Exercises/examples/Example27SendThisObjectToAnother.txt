@@ -1,0 +1,31 @@
+package package1;
+
+import java.util.Random;
+
+
+
+ class Person {
+	String name;
+	public void printInfo()
+	{
+		PersonPrinter printer = new PersonPrinter();
+		printer.printPeron(this);  // send the current person object to the printer
+	}
+  }
+
+ class PersonPrinter
+ {
+	 void printPeron(Person p)
+	 {
+		 System.out.println("*******");
+		 System.out.println(p.name);
+		 System.out.println("*******");
+	 }
+ }
+public class Example {
+
+	public static void main(String[] argsadfadf) {
+		Person p = new Person();
+		p.name = "ProtectedName";
+	}
+}

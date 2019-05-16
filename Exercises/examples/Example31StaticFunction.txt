@@ -1,0 +1,28 @@
+package package1;
+
+
+
+
+class Person
+{
+   int id;
+   private static int numOfPersons; 
+   Person()
+   {
+	   numOfPersons++;
+	   id = numOfPersons;
+   }
+   static void printNumOfPersons()
+   {
+	   System.out.println(numOfPersons);
+   }
+}
+
+
+public class Example {
+
+	public static void main(String[] argsadfadf) {
+
+		Person.printNumOfPersons();
+	}
+}

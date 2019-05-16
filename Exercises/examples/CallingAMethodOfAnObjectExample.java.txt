@@ -1,0 +1,32 @@
+package project1;
+
+
+
+class Ball
+{
+	int x;
+	int y;
+	public void printCoordinates()
+	{
+		System.out.println("I am a ball at " + x + ":" + y);
+	}
+}
+
+
+public class Example {
+
+	public static void main(String[] argsadfadf) {
+		Ball ball1 = new Ball(); 
+		ball1.x = 5; ball1.y = 9;
+		Ball ball2 = new Ball(); 
+		ball1.printCoordinates(); //Correct
+		//Common Mistakes
+		//printCoordinates();   // what ball?
+		//Ball.printCoordinaes(); // but what ball??
+	}
+
+	
+	
+
+
+}

@@ -1,0 +1,37 @@
+package project1;
+
+
+
+class Ball
+{
+	int x;
+	int y;
+	static int numOfBalls;
+	public void printInfo()
+	{
+		System.out.println("I am a ball at " + x + ":" + y);
+		System.out.println("My address = " + this);
+	}
+	public static void printNumberOfBalls()
+	{
+		System.out.println("Number of balls = " + numOfBalls);
+
+	}
+	
+}
+
+public class Example {
+
+	public static void main(String[] argsadfadf) {
+          Ball ball1 = new Ball();
+          Ball.numOfBalls++;
+          Ball.printNumberOfBalls();
+ 
+
+	}
+
+	
+	
+
+
+}

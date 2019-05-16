@@ -1,0 +1,35 @@
+package package1;
+
+class Animal
+{
+	void makeSound()
+	{
+		
+	}
+}
+class Dog extends Animal
+{
+	@Override
+	void MakeSound()
+	{
+		System.out.println("Woof!");
+	}
+}
+class Cat extends Animal
+{
+	@Override
+	void makeSound()
+	{
+		System.out.println("Meow!");
+	}
+}
+public class Example {
+
+	public static void main(String[] argsadfadf) {
+		Dog animal;
+		animal = new Dog();
+		animal.makeSound();
+
+
+	}
+}

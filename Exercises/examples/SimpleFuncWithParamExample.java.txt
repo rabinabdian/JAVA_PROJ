@@ -1,0 +1,15 @@
+package project1;
+
+
+public class Example {
+
+	public static void main(String[] args) {
+		int x = 5;
+        f1(42);
+	}
+	public static void f1(int value)
+	{
+		System.out.println("In f1 value = " + value);			
+	}
+
+}

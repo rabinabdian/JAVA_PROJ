@@ -1,0 +1,33 @@
+package project1;
+
+
+
+class Ball
+{
+	int x;
+	int y;
+}
+public class Example {
+
+	public static void main(String[] args) {
+		Ball ball1 = new Ball();
+		f1(ball1);
+		System.out.println(ball1.x);  // this will print 0
+		// because a function can change the contents of an object passed into it
+		// but it cannot change the address of the object.
+		// JAVA only has pass by copy. With objects a copy of the address is passed.
+		
+		
+	}
+
+	private static void f1(Ball ball1) {
+		// can the function change the values that main will see? - YES
+		// can the function change the address of ball1 that main will see?
+		Ball ball2 = new Ball(); ball2.x = 5; ball2.y = 7;
+		ball1 = ball2;
+	}
+	
+	
+
+
+}

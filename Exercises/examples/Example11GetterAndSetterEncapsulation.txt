@@ -1,0 +1,60 @@
+package package1;
+
+import java.util.Date;  // alias Date = java.util.Date
+
+import package0.Person;
+
+//class Ball
+//{
+//	private int x;
+//	public int y;
+//	public Ball(int xPos, int yPos) // constructor
+//	{
+//		this.x = xPos;
+//		this.y = yPos;
+//	}
+//	public Ball()
+//	{
+//		
+//	}
+//	public void printInfo()
+//	{
+//		System.out.println("I am a ball at " + x + ":" + y);
+//		System.out.println("My address = " + this);
+//	}
+//}
+
+
+class TV
+{
+	private int brightness;
+
+	public int getBrightness() {
+		return brightness;
+	}
+
+	// compiler translates the setBrightness function to have an extra param
+	//public void setBrightness(TV this , int brightness) {
+	public void setBrightness(int brightness) {
+		this.brightness = brightness;
+	}
+
+	
+}
+
+public class Example {
+
+	public static void main(String[] argsadfadf) {
+		TV tv1 = new TV();
+		tv1.setBrightness(30); 
+		// compiler translates the above line to
+		//TV.setBrightness(tv1,30)
+		
+		System.out.println(tv1.getBrightness());
+
+	}
+	
+	
+
+
+}

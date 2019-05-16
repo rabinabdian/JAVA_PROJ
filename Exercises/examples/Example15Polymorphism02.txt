@@ -1,0 +1,69 @@
+package package1;
+
+import java.util.Date;  // alias Date = java.util.Date
+
+import package0.Person;
+
+//class Ball
+//{
+//	private int x;
+//	public int y;
+//	public Ball(int xPos, int yPos) // constructor
+//	{
+//		this.x = xPos;
+//		this.y = yPos;
+//	}
+//	public Ball()
+//	{
+//		
+//	}
+//	public void printInfo()
+//	{
+//		System.out.println("I am a ball at " + x + ":" + y);
+//		System.out.println("My address = " + this);
+//	}
+//}
+
+
+class Shape
+{
+	private int xPos;
+	private int yPos;	
+	public void printPositions()
+	{
+		System.out.println("Shape at pos " + xPos + ":" + yPos);		
+	}
+	public void draw() 
+	{
+		System.out.println("I am some shape");
+	}
+}
+class Circle extends Shape
+{
+	public void draw() {  // overriding function from base (parent) class
+		System.out.println("O");
+		printPositions();
+	}
+}
+class Rectangle extends Shape
+{
+	public void draw() {   // overriding function from base class
+		System.out.println("[]");
+		printPositions();
+	}	
+}
+public class Example {
+
+	public static void main(String[] argsadfadf) {
+		Shape shape = new Rectangle();  
+		shape.draw();
+		
+		shape = new Circle();
+		shape.draw();
+
+	}
+	
+	
+
+
+}

@@ -1,0 +1,49 @@
+package package1;
+
+
+interface Shape{   // interface is like a class with only abstract public methods and no implementation
+	// It cannot have real data members, only final static constants
+	// but a class can implement multiple interfaces, and only inherit from 1 class
+	 void draw();
+}
+interface ThingsWithName
+{
+	String getName();
+}
+class Rectangle implements Shape, ThingsWithName
+{
+	public void draw() {
+		System.out.println("[]");
+	}
+
+	@Override
+	public String getName() {
+		return "Rectangle";
+	}
+}
+class Circle implements Shape
+{
+	public void draw() {
+		System.out.println("O");
+	}	
+}
+
+
+public class Example {
+
+	public static void main(String[] argsadfadf) {
+      Rectangle rectangle = new Rectangle();
+      drawShapeTwice(rectangle);  
+      printNameNice(rectangle);
+	}
+	
+	private static void printNameNice(ThingsWithName namedObject) {
+		System.out.println("The name = " + namedObject.getName());
+	}
+
+	public static void drawShapeTwice(Shape shape)
+	{
+		shape.draw();
+		shape.draw();
+	}
+}
